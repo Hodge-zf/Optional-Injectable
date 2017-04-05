@@ -1,21 +1,24 @@
-import java.lang.Object;
-import java.util.Optional;
+public class Example implements InterfaceOptional, InterfaceMysterious{
 
-abstract public class Example implements InterfaceOptional, InterfaceMysterious{
-
-  private Optional optional;
+  private InterfaceOptional interfaceOptional;
 
   public Example(){}
 
-  public Example(Optional optional){}
+  public Example(InterfaceOptional interfaceOptional)
+  {
+    this.interfaceOptional = interfaceOptional;
+  }
 
-  public void doOptional(){
-    if (optional != null){
-       optional.doOptional();
+  public void doOptional()
+  {
+    if (this.interfaceOptional != null){
+       interfaceOptional.doOptional();
      }
     else{ System.out.println("Default");}
   }
 
-  //public void doMysterious(Injectable injectable);
-  //  doInjectableMethod(injectable);
+  public void doMysterious(InterfaceInjectable interfaceInjectable)
+  {
+  interfaceInjectable.doInjectableMethod();
+  }
 }

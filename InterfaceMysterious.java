@@ -1,4 +1,4 @@
 public interface InterfaceMysterious{
 
-  void doMysterious(Injectable);
+  public void doMysterious(InterfaceInjectable interfaceInjectable);
 }
